@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudentSnacks Hjemmesiden</title>
+    <link rel="stylesheet" href="./style/main.css" />
+    <script src="./js/script.js" type="module" defer></script>
+    <script src="./js/components.js" type="module" defer></script>
+    <script
+      src="https://kit.fontawesome.com/17c7a6edf9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <a class="headerA" href="../index.html"><div class="headerLogo"></div></a>
+      <div class="hamburger">
+        <span class="ham-bar bar-top"> </span>
+        <span class="ham-bar bar-mid"> </span>
+        <span class="ham-bar bar-bottom"> </span>
+      </div>
+      <nav class="navbar">
+        <ul class="menu">
+          <li id="recipes" class="menuA">
+            <a href="./pages/recipes.html">Oppskrifter</a>
+          </li>
+          <li id="about" class="menuA">
+            <a href="./pages/about.html">Om oss</a>
+          </li>
+          <li href id="contact" class="menuA">
+            <a href="./pages/contact.html">Kontakt</a>
+          </li>
+          <li id="search" class="menuA">
+            <img class="searchicon" src="./media/Vectorsearch.svg" />
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="hero">
+      <img class="herotext" src="./media/reklame2.svg" />
+      <div class="hero-information">
+        <h2>Om StudentSnacks</h2>
+        <p>
+          Denne matbloggen gir deg oppskrifter på alt slags måltider for
+          studenter! Vi jobber for å lære studenter å lage enkle og sunne retter
+          for minst mulig penger!
+        </p>
+      </div>
+      <div class="filter"></div>
+      <div class="heroimage"></div>
+    </div>
+    <div class="slider-wrapper">
+      <button class="btn" id="prev-btn">
+        <img height="60%" width="60%" src="./media/moveArrow.svg" />
+      </button>
+      <button class="btn" id="next-btn">
+        <img
+          class="arrowleft"
+          height="60%"
+          width="60%"
+          rotate="180deg"
+          src="./media/moveArrow.svg"
+        />
+      </button>
+      <div class="slide-container">
+        <div class="slider">
+          <div id="loader">
+            <img class="loader" src="./media/SNACKS.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="socials">
+        <a class="socials1"
+          ><img class="social-element" src="./media/insta.svg"
+        /></a>
+        <a class="socials2"
+          ><img class="social-element" src="./media/face.svg"
+        /></a>
+        <a class="socials3"
+          ><img class="social-element" src="./media/tiktok.svg"
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>

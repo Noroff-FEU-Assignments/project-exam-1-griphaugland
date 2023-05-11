@@ -1,0 +1,461 @@
+/* Theme Styles */
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@300;400;500;600&display=swap");
+:root {
+  --theme-color-pink: #efd1d1;
+  --theme-color-green: #2a4a2b;
+  --font: "Montagu Slab", serif;
+}
+/* Nav Bar */
+.header {
+  width: 100vw;
+  height: 100px;
+  background-color: var(--theme-color-green);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  font-family: var(--font);
+}
+.headerLogo {
+  width: 15rem;
+  height: 5rem;
+  background-image: url(../media/StudenSnacksLogo.svg);
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.headerLogo:hover {
+  transform: scale(1.1);
+}
+.hamburger {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  margin-left: auto;
+  gap: 0.5rem;
+  z-index: 11;
+}
+.searchicon {
+  width: 33px;
+  height: 33px;
+}
+#search {
+  width: 50px;
+  height: 35px;
+}
+.menu {
+  width: 100%;
+  height: 100%;
+  gap: 5rem;
+  font-size: 3rem;
+  position: relative;
+  color: var(--theme-color-pink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: 10;
+}
+.ham-bar {
+  display: block;
+  width: 2.7rem;
+  height: 0.2rem;
+  background-color: white;
+}
+.ham-bar:nth-of-type(2) {
+  width: 1.5rem;
+}
+.ham-bar .bar-mid {
+  width: 2rem;
+}
+.hamburger.active .bar-top {
+  transform: rotate(45deg) translateY(3px) translateX(5px);
+  width: 2.7rem;
+}
+.hamburger.active .bar-bottom {
+  transform: rotate(-45deg) translateY(-10px) translateX(12px);
+  width: 2.7rem;
+}
+.hamburger.active .bar-mid {
+  opacity: 0;
+  width: 2rem;
+}
+li {
+  width: 125px;
+  text-align: center;
+}
+.navbar {
+  top: 0;
+  right: 0;
+  position: fixed;
+  height: 100%;
+  width: 0%;
+  background-color: var(--theme-color-green);
+  z-index: 1;
+}
+.activenav {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  z-index: 10;
+  transition: 0.3s;
+}
+.activenav .menu {
+  opacity: 1;
+  z-index: 10;
+  transition: 0.3s;
+}
+@media only screen and (min-width: 1000px) {
+  .header {
+    width: 100%;
+    height: 85px;
+    background-color: var(--theme-color-green);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .headerLogo {
+    width: 17rem;
+    height: 5rem;
+    background-image: url(../media/StudenSnacksLogo.svg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: auto;
+  }
+  .hamburger {
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin-left: auto;
+    gap: 0.3rem;
+  }
+  .menu {
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    opacity: 1;
+    margin-left: auto;
+    transition: none;
+  }
+  .ham-bar {
+    display: block;
+    width: 2.7rem;
+    height: 0.2rem;
+    background-color: white;
+  }
+  .hamburger.active .bar-top {
+    transform: rotate(45deg) translateY(2px) translateX(5px);
+    width: 2.7rem;
+  }
+  .hamburger.active .bar-bottom {
+    transform: rotate(-45deg) translateY(-2px) translateX(5px);
+    width: 2.7rem;
+  }
+  .hamburger.active .bar-mid {
+    opacity: 0;
+    width: 2rem;
+  }
+  .navbar {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: none;
+  }
+  .activenav {
+    z-index: 2;
+    width: 100%;
+  }
+}
+/* Hero */
+.hero {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+.heroimage {
+  background-image: url("../media/eggbrodsandwich.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+}
+.herotext {
+  position: absolute;
+  z-index: 1;
+  left: 1rem;
+  bottom: -5%;
+  width: 23rem;
+  height: 23rem;
+}
+.hero-information {
+  position: absolute;
+  font-family: var(--font);
+  background-color: var(--theme-color-green);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 175px;
+  align-items: center;
+  z-index: 1;
+  right: 1rem;
+  bottom: 1rem;
+}
+.hero-information h2 {
+  padding-top: 0.3rem;
+  font-size: 1.5rem;
+  color: #fdc5c5;
+}
+.hero-information p {
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: #ffe3e3;
+}
+/* Slider */
+.btn {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 50%;
+  background-color: rgba(255, 255, 255, 0.588);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrowleft {
+  rotate: 180deg;
+}
+#prev-btn {
+  right: 0;
+}
+#next-btn {
+  left: 0;
+}
+.box {
+  width: 100%;
+  height: 100%;
+}
+.imageel {
+  width: 350px;
+  height: 350px;
+}
+.slider-wrapper {
+  background-color: #ededed;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.slide-container {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+.slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 100%;
+}
+.box {
+  flex: 1 0 34%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-family: var(--font);
+}
+.recipe-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.recipe-main {
+  font-size: 1.3rem;
+  color: var(--theme-color-green);
+}
+.imageel {
+  border-radius: 100%;
+  background-position: center;
+  background-size: fill;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.excerpt-container {
+  position: absolute;
+  bottom: 10%;
+  width: 350px;
+  height: 100px;
+  padding: 8px;
+  background-color: var(--theme-color-pink);
+}
+.excerpt-container p {
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 85px;
+  background-color: var(--theme-color-green);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 0;
+}
+.socials {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  color: white;
+}
+
+/* Loader */
+.loader {
+  width: 80px;
+  height: 100px;
+  animation: toColor 5s linear infinite;
+}
+
+#loader-recipes {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes toColor {
+  0% {
+    -webkit-filter: opacity(0%);
+    filter: opacity(0%);
+  }
+  25% {
+    -webkit-filter: opacity(50%);
+    filter: opacity(50%);
+  }
+  50% {
+    -webkit-filter: opacity(100%);
+    filter: opacity(100%);
+  }
+  75% {
+    -webkit-filter: opacity(50%);
+    filter: opacity(50%);
+  }
+  100% {
+    -webkit-filter: opacity(0%);
+    filter: opacity(0%);
+  }
+}
+
+#loader {
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader.show {
+  display: flex;
+  flex-direction: column;
+}
+
+#loader.hide {
+  display: none;
+}
+/* Recipes Page */
+.recipes-page-container {
+  width: 100%;
+  height: 100%;
+}
+#recipes-main {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 2rem;
+  max-width: 100vw;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+.image_wrapper {
+  max-width: 100%;
+  max-height: 100%;
+}
+.imageel {
+  width: 350px;
+  height: 350px;
+}
+.title-container {
+  position: absolute;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background-color: var(--theme-color-pink);
+  width: 100%;
+  bottom: 0;
+  height: 70px;
+  padding: 10px;
+  font-family: var(--font);
+}
+.recipes-main {
+  font-size: 1.3rem;
+  color: var(--theme-color-green);
+  width: 100%;
+  height: 100%;
+}
+.box-recipes {
+  position: relative;
+}
