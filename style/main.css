@@ -35,6 +35,7 @@ main {
 .pattern-main {
   position: relative;
   display: flex;
+  min-height: 120vh;
 }
 .bg-pattern {
   width: 100%;
@@ -44,6 +45,6 @@ main {
 .bg-pattern-wrapper {
   position: absolute;
   width: 80%;
-  height: 100%;
+  height: 120vh;
   padding: 1rem;
 }

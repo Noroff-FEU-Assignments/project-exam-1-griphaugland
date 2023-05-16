@@ -407,6 +407,18 @@ footer {
   justify-content: center;
   align-items: center;
 }
+#loaderFullPage {
+  z-index: 1;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #loader.show {
   display: flex;
@@ -569,4 +581,24 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+/* About Page */
+.pattern-main {
+  min-height: 120vh;
+}
+.bg-pattern-wrapper {
+  background-image: url("../media/mainbgpattern.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* Specific Page */
+.spec-img-el {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+.specific-image {
+  width: 500px;
+  height: 500px;
 }
