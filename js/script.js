@@ -1,7 +1,7 @@
 /* Fetch slider*/
 const slider = document.querySelector(".slider")
 const url = "https://gripdev.no/exam1/wp-json/wp/v2/posts?_embed=wp:featuredmedia"
-const delay = 2000;
+const delay = 500;
 const loader = document.getElementById("loader");
 
 const getRecipesSlider = () => {
