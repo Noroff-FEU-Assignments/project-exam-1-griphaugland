@@ -62,7 +62,7 @@
 .menu {
   width: 100%;
   height: 100%;
-  gap: 10rem;
+  gap: 6rem;
   font-size: 3rem;
   position: relative;
   color: var(--theme-color-pink);
@@ -120,7 +120,7 @@ li {
 }
 .activenav .menu {
   width: 100%;
-  height: 100%;
+  height: 80%;
   position: fixed;
   opacity: 1;
   z-index: 99;
@@ -274,10 +274,12 @@ nav {
   rotate: 180deg;
 }
 #prev-btn {
-  right: 0;
+  z-index: 5;
+  left: 0;
 }
 #next-btn {
-  left: 0;
+  z-index: 5;
+  right: 0;
 }
 .box {
   width: 100%;
@@ -303,13 +305,26 @@ nav {
   width: 100%;
   overflow: scroll;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: row;
 }
 .slider {
-  width: 100%;
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: row;
-  flex: 1 0 100%;
+}
+.sliderLeft {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.sliderRight {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 .box {
   flex: 1 0 34%;
@@ -611,7 +626,6 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }
 .signature {
@@ -718,6 +732,27 @@ footer {
   height: 300px;
   z-index: 1;
 }
+/* @media only screen and (max-width: 500px) {
+  .title-specific {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.2rem;
+    font-size: 1rem;
+    line-height: 41px;
+    z-index: 3;
+  }
+  .timespecific {
+    width: 70px;
+    height: 70px;
+    background-color: var(--theme-color-green);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+} */
 
 .title-specific {
   display: flex;
@@ -729,7 +764,7 @@ footer {
   font: var(--font);
   font-weight: 600;
   color: var(--theme-color-green);
-  font-size: 1.6rem;
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
   line-height: 41px;
   font-style: normal;
   z-index: 3;
