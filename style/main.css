@@ -11,16 +11,20 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
 }
-li {
-  list-style: none;
+.tilberedning li {
+  list-style-position: inside;
 }
 a {
   text-decoration: none;
   color: var(--theme-color-pink);
   font-size: 1.3rem;
 }
-menu li {
+.tilbehor li {
+  list-style: none;
+}
+menu {
   min-width: 125px;
+  list-style: none;
 }
 li a {
   width: 100%;

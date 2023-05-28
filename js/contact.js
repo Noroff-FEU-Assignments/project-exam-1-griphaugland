@@ -15,7 +15,7 @@ const nameReg = /^[\x20-\x7E\u00F8\u00E6\u00E5]{5,50}$/;
 const phoneReg = /^(\+\d{1,3}\s?)?(\()?\d{3}(\))?[-.\s]?\d{3}[-.\s]?\d{2}$/;
 const emailReg =  /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 const subjectReg = /^[\p{L}\p{M}\p{N}\p{P}\p{S}\p{Zs}]{15,50}$/u;
-const messageReg = /^[\p{L}\p{M}\p{N}\p{P}\p{S}\p{Zs}]{25,500}$/u;
+const messageReg = /^[\p{L}\p{M}\p{N}\p{P}\p{S}\p{Zs}]{25,500}$/um;
 
 const regexTester = (input, rule, inputType) => {
     if (inputType === '') {
@@ -86,5 +86,4 @@ const doneFunc = () => {
     successMsgText.innerHTML = "Takk for at du tar kontakt. Vi prøver å svare deg fortest mulig men kommer uansett tilbake til deg innen 2 arbeidsdager! Ha en super dag :)";
     successMsg.appendChild(successMsgHeader);
     successMsg.appendChild(successMsgText);
-/*     successMsg.innerHTML = `Takk for at du tar kontakt! Vi kommer tilbake til deg innen 2 arbeidsdager.`; */
   };
