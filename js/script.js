@@ -7,7 +7,6 @@ const delay = 400;
 const loader = document.getElementById("loader");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
-const leftRecipeImage = document.querySelector("#left-box");
 const sliderHeader = document.querySelector('.slider-header')
 let recipes = [];
 
