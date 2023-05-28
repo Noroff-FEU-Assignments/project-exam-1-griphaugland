@@ -1,79 +1,117 @@
 /* Fetch slider*/
-const slider = document.querySelector(".slider")
-const sliderLeft = document.querySelector(".sliderLeft")
-const sliderRight = document.querySelector(".sliderRight")
-const url = "https://gripdev.no/exam1/wp-json/wp/v2/posts?_embed=wp:featuredmedia"
+const slider = document.querySelector(".slider");
+const sliderLeft = document.querySelector(".sliderLeft");
+const sliderRight = document.querySelector(".sliderRight");
+const url = "https://gripdev.no/exam1/wp-json/wp/v2/posts?_embed=wp:featuredmedia";
 const delay = 400;
 const loader = document.getElementById("loader");
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+const leftRecipeImage = document.querySelector("#left-box");
+const sliderHeader = document.querySelector('.slider-header')
+let recipes = [];
 
-const getRecipesSlider = () => {
-    loader.classList.add("show");
-    loader.classList.remove("hide");
-fetch(url)
-.then(res => res.json())
-.then((data)=>{
-    renderSlider(data)
-    loader.classList.add("hide");
-    loader.classList.remove("show");
-})
-
+function getRecipesSlider() {
+  loader.classList.add("show");
+  loader.classList.remove("hide");
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      recipes = data.slice(0, 8);
+      renderSlider();
+      loader.classList.add("hide");
+      loader.classList.remove("show");
+    });
 }
 
-function renderSlider(recipes) {
-    /* let recipes = []; // Array to store the recipes
-let currentIndex = 0; // Index of the currently selected recipe
-const nextButton = document.getElementById("next-button");
-nextButton.addEventListener("click", () => {
-  navigateCarousel(1); // Move to the next recipe
-});
-const prevButton = document.getElementById("prev-button");
-prevButton.addEventListener("click", () => {
-  navigateCarousel(-1); // Move to the previous recipe
-});
- */
-const index = recipes
-const currentIndex = recipes.slice(3,5)
+prevBtn.onclick = () => {
+  prev();
+  sliderHeader.style.display = "none"
+};
 
-        sliderLeft.innerHTML = recipes.slice(0, 2).map((ele, index, arr) => 
-        {
-            const {id, title, excerpt} = ele;
-            let media = ele._embedded["wp:featuredmedia"][0].source_url;
-            return `
-            <a href="/pages/specific.html?id=${id}" class="box">
-            <div class="recipe-container"
+nextBtn.onclick = () => {
+  next();
+  sliderHeader.style.display = "none"
+};
 
-                <div class="image_wrapper">
-                <img class="imageel" src="${media}">
-                <div class="excerpt-container">
-                <h1 class="recipe-main">${title.rendered}</h1>
-                ${excerpt.rendered}</div>
-                </div>
-            </div> 
-        </a>`;
-        }
-        ).join("")
-        
-        slider.innerHTML = recipes.slice(1, 2).map((ele, index, arr) => 
-        {
-            const {id, title, excerpt} = ele;
-            let media = ele._embedded["wp:featuredmedia"][0].source_url;
-            return `
-            <a href="/pages/specific.html?id=${id}" class="box">
-            <div class="recipe-container"
+let focusRecipe = 0;
 
-                <div class="image_wrapper">
-                <img class="imageel" src="${media}">
-                <div class="excerpt-container">
-                <h1 class="recipe-main">${title.rendered}</h1>
-                ${excerpt.rendered}</div>
-                </div>
-            </div> 
-        </a>`;
-        }
-        ).join("")
+function renderSlider() {
+  loader.classList.add("show");
+  loader.classList.remove("hide");
+
+  let leftRecipe = focusRecipe - 1;
+  let rightRecipe = focusRecipe + 1;
+
+  if (leftRecipe < 0) {
+    leftRecipe = recipes.length - 1;
+  }
+  if (rightRecipe >= recipes.length) {
+    rightRecipe = 0;
+  }
+
+  const focusedRecipe = recipes[focusRecipe];
+  const leftSliderRecipe = recipes[leftRecipe];
+  const rightSliderRecipe = recipes[rightRecipe];
+
+  let focusMedia = focusedRecipe._embedded["wp:featuredmedia"][0].source_url;
+  let leftMedia = leftSliderRecipe._embedded["wp:featuredmedia"][0].source_url;
+  let rightMedia = rightSliderRecipe._embedded["wp:featuredmedia"][0].source_url;
+
+  sliderLeft.innerHTML = `
+    <div id="left-box" class="box">
+      <div class="recipe-container">
+        <div class="image_wrapper">
+          <img class="imageel-sides" src="${leftMedia}">
+        </div> 
+      </div>
+    </div>`;
+
+  slider.innerHTML = `
+    <a href="/pages/specific.html?id=${focusedRecipe.id}" class="box">
+      <div class="recipe-container">
+        <div class="image_wrapper">
+          <img class="imageel" src="${focusMedia}">
+          <div class="excerpt-container">
+            <h1 class="recipe-main">${focusedRecipe.title.rendered}</h1>
+            ${focusedRecipe.excerpt.rendered}
+          </div>
+        </div>
+      </div> 
+    </a>`;
+
+  sliderRight.innerHTML = `
+    <div id="right-box" class="box">
+      <div class="recipe-container">
+        <div class="image_wrapper">
+          <img class="imageel-sides" src="${rightMedia}">
+        </div> 
+      </div>
+    </div>`;
+
+  loader.classList.add("hide");
+  loader.classList.remove("show");
 }
-  setTimeout(() => {getRecipesSlider()}, delay);
 
+function next() {
+  focusRecipe += 1;
+  if (focusRecipe >= recipes.length) {
+    focusRecipe = 0;
+  }
+  renderSlider();
+}
+
+function prev() {
+  focusRecipe -= 1;
+  if (focusRecipe < 0) {
+    focusRecipe = recipes.length - 1;
+  }
+  renderSlider();
+}
+
+setTimeout(() => {
+  getRecipesSlider();
+}, delay);
 
 function renderLoader() {
     loader.classList.add("show");

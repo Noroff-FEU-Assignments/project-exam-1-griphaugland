@@ -259,16 +259,17 @@ nav {
 }
 /* Slider */
 .btn {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   border-radius: 50%;
-  bottom: 50%;
+  bottom: 40%;
   background-color: rgba(255, 255, 255, 0.588);
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .arrowleft {
   rotate: 180deg;
@@ -303,28 +304,31 @@ nav {
 .slide-container {
   height: 100%;
   width: 100%;
+  position: relative;
   overflow: scroll;
   scroll-behavior: smooth;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+}
+.slider-header {
+  color: rgb(136, 136, 136);
+  position: absolute;
+  right: 20px;
+  top: 2px;
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 .slider {
-  width: 30%;
+  width: 30;
   height: 100%;
   display: flex;
-  flex-direction: row;
-}
-.sliderLeft {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-.sliderRight {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  left: 0;
+  top: 0;
+  transition: 0.4s ease-in-out;
 }
 .box {
   flex: 1 0 34%;
@@ -354,6 +358,15 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.imageel-sides {
+  border-radius: 100%;
+  background-position: center;
+  background-size: fill;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: blur(2px);
 }
 .excerpt-container {
   position: absolute;
@@ -484,6 +497,10 @@ footer {
 .imageel {
   width: 350px;
   height: 350px;
+}
+.imageel-sides {
+  width: 250px;
+  height: 250px;
 }
 .title-container {
   position: absolute;
@@ -832,15 +849,13 @@ li {
   width: 100%;
   z-index: 2;
 }
-.accessories {
+.tilberedning li {
+  padding: 0.5rem;
 }
-.preparation {
-}
-.tips {
-}
-.tilbehor {
-}
-.tilberedning {
+.tips-recipe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ingred-image-wrapper {
   position: relative;
@@ -1060,6 +1075,53 @@ h4 {
     bottom: -4%;
     width: 19rem;
     height: 19rem;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .herotext {
+    position: absolute;
+    z-index: 1;
+    left: 2rem;
+    bottom: -4%;
+    width: 14rem;
+    height: 14rem;
+  }
+  .imageel {
+    width: 250px;
+    height: 250px;
+  }
+  .imageel-sides {
+    width: 150px;
+    height: 150px;
+  }
+  .recipe-container {
+    margin-top: 4rem;
+    display: inline-block;
+  }
+  .excerpt-container {
+    top: 200px;
+    max-width: 100%;
+  }
+  .recipe-main {
+    font-size: 1.1rem;
+  }
+  .excerpt-container p {
+    font-size: 0.7rem;
+  }
+  .btn {
+    bottom: 200px;
+    height: 70px;
+    width: 70px;
+  }
+  .slider-header {
+    left: 40px;
+  }
+  .slider-wrapper {
+    height: 360px;
+  }
+  .slide-container {
+    height: 100%;
+    overflow: hidden;
   }
 }
 @media only screen and (max-width: 700px) {
