@@ -23,7 +23,7 @@ const fetchRecipes = () => {
 
 function renderSingleRecipe(data) {
     const recipe = data.find(post => post.id === parseInt(id));
-    document.title = `StudentSnacks ${recipe.title.rendered}`
+    document.title = `StudentSnacks | ${recipe.title.rendered}`
 
     let media = recipe._embedded["wp:featuredmedia"][0].source_url;
             main.innerHTML = 
@@ -64,10 +64,10 @@ function renderSingleRecipe(data) {
                 document.querySelector('.preparation').appendChild(document.querySelector('.tilberedning'));
                 document.querySelector('.accessories').appendChild(document.querySelector('.tilbehor'));
                 document.querySelector('.tips-recipe').appendChild(document.querySelector('.tips'));
+                const body = document.querySelector('body');
                 const filterSpecific = document.querySelector('.filter-specific');
                 const modal = document.querySelector('.modal');
                 const modalImage = document.querySelector('.modal-img')
-                const x = document.querySelector('.closeModal')
                 let modalOpen = false;
                 filterSpecific.addEventListener('click', () => {
                     if(!modalOpen){
@@ -75,15 +75,22 @@ function renderSingleRecipe(data) {
                         modalOpen = true;
                     }
                 });
+                modal.addEventListener("click", function () {
+                    if (modal.style.display !== "none") {
+                      closeModal()
+                    } else {
+                      modal.style.display = "flex";
+                    }
+                  });
                 if (modalOpen == true) {
                     main.style.cursor = "pointer";
                     modalImage.style.cursor = "default"
                 } else {
                     main.style.cursor = "default";
                 }
-                x.onclick = (e) => {
-                        modal.style.display = "none";
-                        modalOpen = false;
+               function closeModal() {
+                    modal.style.display = "none";
+                    modalOpen = false;
                 }
     }
     fetchRecipes();

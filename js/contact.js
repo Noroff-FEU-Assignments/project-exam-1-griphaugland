@@ -5,18 +5,42 @@ const emailInput = document.getElementById('emailInput')
 const subjectInput = document.getElementById('subjectInput')
 const messageInput = document.getElementById('messageTextArea')
 
-const nameReg = /^[\x20-\x7E\u00F8\u00E6\u00E5]{2,50}$/;
+const nameFeedback = document.querySelector('#nameFeedback')
+const phoneFeedback = document.querySelector('#phoneFeedback')
+const emailFeedback = document.querySelector('#emailFeedback')
+const subjectFeedback = document.querySelector('#subjectFeedback')
+const messageFeedback = document.querySelector('#messageFeedback')
+
+const nameReg = /^[\x20-\x7E\u00F8\u00E6\u00E5]{5,50}$/;
 const phoneReg = /^(\+\d{1,3}\s?)?(\()?\d{3}(\))?[-.\s]?\d{3}[-.\s]?\d{2}$/;
 const emailReg =  /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
-const subjectReg = /^[\p{L}\p{M}\p{N}\p{P}\p{S}\p{Zs}]{2,50}$/u;
-const messageReg = /^[\p{L}\p{M}\p{N}\p{P}\p{S}\p{Zs}]{1,500}$/u;
+const subjectReg = /^[\p{L}\p{M}\p{N}\p{P}\p{S}\p{Zs}]{15,50}$/u;
+const messageReg = /^[\p{L}\p{M}\p{N}\p{P}\p{S}\p{Zs}]{25,500}$/u;
 
 const regexTester = (input, rule, inputType) => {
-    if (input === '') {
+    if (inputType === '') {
       console.log('RegTest:', 'false, empty string');
-      feedback.innerHTML = "Vennligst fyll alle feltene.";
+      feedback.innerHTML = "Du har ikke skrevet noe. Vennligst fyll alle feltene.";
       inputType.style.outline = "1px solid red";
       return false;
+    }
+    if (inputType.style.outline = "1px solid red") {
+        nameFeedback.innerHTML = "Navn (Må være lengre enn 5 bokstaver)"
+        phoneFeedback.innerHTML = "Telefon nummer (Norsk telefonnummer på 8 tall)"
+        emailFeedback.innerHTML = "Email adresse (f.eks ola@nordmann.no)"
+        subjectFeedback.innerHTML = "Årsak til henvendelse (Må være mer enn 15 bokstaver eller tall )"
+        messageFeedback.innerHTML = "Melding (Må være mer 25 enn bokstaver eller tall)"
+      }
+    else {
+        nameFeedback.innerHTML = "Navn"
+    
+        phoneFeedback.innerHTML = "Telefon nummer"
+   
+        emailFeedback.innerHTML = "Email adresse"
+    
+        subjectFeedback.innerHTML = "Årsak til henvendelse"
+
+        messageFeedback.innerHTML = "Melding"
     }
   
     const isValid = rule.test(input);
@@ -24,6 +48,7 @@ const regexTester = (input, rule, inputType) => {
   
     if (!isValid) {
       inputType.style.outline = "1px solid red";
+      feedback.innerHTML = ""
     } else {
       inputType.style.outline = "";
     }
@@ -38,10 +63,6 @@ const feedback = document.createElement('div');
 feedback.style.position = "absolute";
 feedback.style.left = "0";
 feedback.style.color = "red";
-const nameFeedback = document.querySelector('.nameFeedback')
-const phoneFeedback = document.querySelector('.phoneFeedback')
-const emailFeedback = document.querySelector('.emailFeedback')
-const subjectFeedback = document.querySelector('.subjectFeedback')
 buttonFeedbackWrap.appendChild(feedback);
 
 form.onsubmit = (e) => {
