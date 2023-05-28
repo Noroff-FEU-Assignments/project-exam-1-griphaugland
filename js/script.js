@@ -67,7 +67,7 @@ function renderSlider() {
     </div>`;
 
   slider.innerHTML = `
-    <a href="/pages/specific.html?id=${focusedRecipe.id}"  class="box">
+    <a href="/pages/specific.html?id=${focusedRecipe.id}" class="box">
       <div class="recipe-container">
         <div class="image_wrapper">
           <img class="imageel" src="${focusMedia}">

@@ -278,6 +278,14 @@ nav {
   z-index: 5;
   right: 0;
 }
+@keyframes opacify {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .box {
   width: 100%;
   height: 100%;
@@ -344,6 +352,7 @@ nav {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  animation: opacify 2s;
 }
 .recipe-main {
   font-size: 1.3rem;
