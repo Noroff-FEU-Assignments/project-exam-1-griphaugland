@@ -34,7 +34,7 @@ const renderRecipes = (recipes) => {
         <a href="/pages/specific.html?id=${id}" class="box-recipes">
           <div class="time">${timeToMake}</div>
           <div class="image_wrapper">
-            <img class="imageel" src="${media}">
+            <img class="imageel" alt="Image of ${title}" src="${media}">
           </div> 
           <div class="title-container">
             <h1 class="recipes-main">${title.rendered}</h1>
