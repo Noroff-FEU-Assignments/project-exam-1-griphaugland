@@ -46,14 +46,6 @@
   gap: 0.5rem;
   z-index: 11;
 }
-.searchicon {
-  width: 33px;
-  height: 33px;
-}
-#search {
-  width: 50px;
-  height: 35px;
-}
 .menuA a {
   min-width: 70px;
 }
@@ -80,6 +72,7 @@
   width: 2.7rem;
   height: 0.2rem;
   background-color: white;
+  transition: 0.3s ease-in-out;
 }
 .ham-bar:nth-of-type(2) {
   width: 1.5rem;
@@ -114,6 +107,7 @@
   height: 100%;
   margin-top: 100px;
   z-index: 10;
+  transition: 0.3s ease-in-out;
 }
 .activenav .menu {
   width: 100%;
@@ -124,6 +118,7 @@
 }
 nav {
   z-index: 99;
+  transition: 0.3s ease-in-out;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -138,24 +133,10 @@ nav {
   }
   .headerLogo {
     width: 17rem;
-    height: 5rem;
-    background-image: url(../media/StudenSnacksLogo.svg);
-    background-position: left;
-    background-size: cover;
-    background-repeat: no-repeat;
     margin-right: auto;
   }
   .hamburger {
-    z-index: 2;
     display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    width: 5rem;
-    height: 5rem;
-    margin-left: auto;
-    gap: 0.3rem;
   }
   .menu {
     width: 100%;

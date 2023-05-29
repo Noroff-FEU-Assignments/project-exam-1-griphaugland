@@ -22,17 +22,6 @@ function getRecipesSlider() {
       loader.classList.remove("show");
     });
 }
-
-prevBtn.onclick = () => {
-  prev();
-  sliderHeader.style.display = "none"
-};
-
-nextBtn.onclick = () => {
-  next();
-  sliderHeader.style.display = "none"
-};
-
 let focusRecipe = 0;
 
 function renderSlider() {
@@ -92,6 +81,16 @@ function renderSlider() {
   loader.classList.remove("show");
 }
 
+prevBtn.onclick = () => {
+    prev();
+    sliderHeader.style.display = "none"
+  };
+  
+  nextBtn.onclick = () => {
+    next();
+    sliderHeader.style.display = "none"
+  };
+  
 function next() {
   focusRecipe += 1;
   if (focusRecipe >= recipes.length) {
@@ -120,5 +119,3 @@ function renderLoader() {
     loader.classList.remove("show"); 
  }, delay)
 }
-
-
