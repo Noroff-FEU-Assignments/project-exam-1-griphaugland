@@ -1,0 +1,481 @@
+/* Specific Page */
+.shell {
+  width: 100%;
+  height: 100%;
+}
+.spec-img-el {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.specific-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  z-index: 1;
+}
+@media only screen and (max-width: 500px) {
+  .title-specific {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.2rem;
+    font-size: 1rem;
+    line-height: none;
+    z-index: 3;
+    padding: 0;
+    left: 0px;
+  }
+  .timespecific {
+    width: 50px;
+    height: 50px;
+    background-color: var(--theme-color-green);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .headerLogo {
+    width: 10rem;
+    height: 3rem;
+  }
+  .hamburger {
+    width: 2rem;
+    height: 2rem;
+  }
+  .ham-bar {
+    display: block;
+    width: 2rem;
+    height: 0.15rem;
+    background-color: white;
+  }
+  .ham-bar:nth-of-type(2) {
+    width: 1.2rem;
+  }
+  .ham-bar .bar-mid {
+    width: 1.5rem;
+    height: 0.1rem;
+  }
+}
+
+.title-specific {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  gap: 1rem;
+  font: var(--font);
+  font-weight: 600;
+  color: var(--theme-color-green);
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  line-height: 41px;
+  font-style: normal;
+  z-index: 3;
+  bottom: 20px;
+  left: 40px;
+  background-color: #edededd4;
+  border-radius: 20px;
+  padding: 1rem;
+}
+.title-ingredients {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.ingredienser {
+  min-width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--theme-color-pink);
+  gap: 10px;
+  font-family: var(--font-body);
+  padding: 1.2rem;
+  list-style-position: inside;
+}
+.ingredienser li:nth-of-type(1) {
+  font-weight: 600;
+  list-style: none;
+}
+.ingredienser li {
+  text-align: start;
+  width: 100%;
+  list-style: circle;
+  list-style-position: inside;
+}
+.menuA {
+  list-style: none;
+}
+li {
+  width: 100%;
+  font-family: var(--font);
+  text-align: center;
+}
+.ingredients {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 1rem;
+}
+.timespecific {
+  width: 70px;
+  height: 70px;
+  background-color: var(--theme-color-green);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+}
+.timeToMake {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--theme-color-pink);
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: 600;
+}
+.title-ingredients-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  z-index: 2;
+}
+.tilberedning li {
+  padding: 0.5rem;
+}
+.tips-recipe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ingred-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+.filter-specific {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 2;
+  opacity: 0.5;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.wrapper-recipe {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+}
+.preparation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  padding: 1rem;
+}
+.tilberedning {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hidden {
+  display: none;
+}
+.preparation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}
+.accessories {
+  min-width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--theme-color-pink);
+  font-family: var(--font-body);
+  margin: 1rem;
+}
+.tilbehor li {
+  text-align: start;
+  width: 100%;
+}
+.tilbehor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 1.2rem;
+  padding-top: 0;
+}
+.accessories h4 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 1.4rem;
+  padding-left: 1rem;
+}
+.preparation-tips {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  width: 100%;
+  font-family: var(--font);
+}
+.tips {
+  font-family: var(--font-body);
+  width: 100%;
+  height: fit-content;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+h4 {
+  font-weight: 600;
+}
+.commentsection {
+  width: 100%;
+  height: fit-content;
+}
+.ingredients-accessories {
+  height: 100%;
+  min-width: 300px;
+}
+/* Image Modal - Specific Page */
+.filter-specific {
+  cursor: pointer;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.752);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 23;
+}
+.modal-img {
+  align-self: center;
+  justify-self: center;
+  width: 50%;
+  height: auto;
+}
+.closeModal:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.closeModal {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  font-size: 1.5rem;
+  border: 3px solid white;
+  border-radius: 100%;
+  display: flex;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+}
+#cross {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+/* Specific page MEDIA QUERIES */
+@media only screen and (max-width: 1000px) {
+  .hero-information {
+    display: none;
+  }
+  .wrapper-recipe {
+    flex-direction: column;
+  }
+  .ingredients-accessories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-img {
+    align-self: center;
+    justify-self: center;
+    max-width: 100%;
+    height: auto;
+  }
+  .closeModal:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.752);
+    display: none;
+    flex-direction: column-reverse;
+    gap: 5rem;
+    z-index: 23;
+  }
+  .closeModal {
+    width: 40px;
+    height: 40px;
+    position: static;
+    font-size: 1.5rem;
+    border: 3px solid white;
+    border-radius: 100%;
+    display: flex;
+  }
+  #cross {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .herotext {
+    position: absolute;
+    z-index: 1;
+    left: 2rem;
+    bottom: -4%;
+    width: 19rem;
+    height: 19rem;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .herotext {
+    position: absolute;
+    z-index: 1;
+    left: 2rem;
+    bottom: -4%;
+    width: 14rem;
+    height: 14rem;
+  }
+  .imageel {
+    width: 250px;
+    height: 250px;
+  }
+  .imageel-sides {
+    width: 150px;
+    height: 150px;
+  }
+  .recipe-container {
+    margin-top: 4rem;
+    display: inline-block;
+  }
+  .excerpt-container {
+    top: 200px;
+  }
+  .recipe-main {
+    font-size: 1.1rem;
+    height: 50px;
+  }
+  .btn {
+    bottom: 200px;
+    height: 70px;
+    width: 70px;
+  }
+  .slider-header {
+    left: 40px;
+  }
+  .slider-wrapper {
+    height: 360px;
+  }
+  .slide-container {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .wrapper-recipe {
+    flex-direction: column;
+  }
+  .ingredients-accessories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-img {
+    align-self: center;
+    justify-self: center;
+    max-width: 100%;
+    height: auto;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.752);
+    display: none;
+    flex-direction: column-reverse;
+    gap: 5rem;
+    z-index: 23;
+  }
+  .closeModal {
+    width: 40px;
+    height: 40px;
+    position: static;
+    font-size: 1.5rem;
+    border: 3px solid white;
+    border-radius: 100%;
+    display: flex;
+  }
+  #cross {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .modal-img {
+    align-self: center;
+    justify-self: center;
+    width: 90%;
+    height: auto;
+  }
+}

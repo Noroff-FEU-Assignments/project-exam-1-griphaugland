@@ -29,7 +29,7 @@ function renderSingleRecipe(data) {
             main.innerHTML = 
         `
         <div class="modal">
-         <div class="closeModal"><i id="cross" class="fa-solid fa-x"></i></div>
+         <div class="closeModal">X</div>
          <img class="modal-img" src="${media}" alt="Image of ${recipe.title.rendered}"> />
         </div>
              <div class="title-ingredients-wrapper">

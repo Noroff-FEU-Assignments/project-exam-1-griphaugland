@@ -61,7 +61,7 @@ function renderSlider() {
     <div id="left-box" class="box">
       <div class="recipe-container">
         <div class="image_wrapper">
-          <img class="imageel-sides" src="${leftMedia}">
+          <img class="imageel-sides" alt="left recipe image blurred" src="${leftMedia}">
         </div> 
       </div>
     </div>`;
@@ -70,7 +70,7 @@ function renderSlider() {
     <a href="/pages/specific.html?id=${focusedRecipe.id}" class="box">
       <div class="recipe-container">
         <div class="image_wrapper">
-          <img class="imageel" src="${focusMedia}">
+          <img class="imageel" alt="Image of focus recipe" src="${focusMedia}">
           <div class="excerpt-container">
             <h1 class="recipe-main">${focusedRecipe.title.rendered}</h1>
             ${focusedRecipe.excerpt.rendered}
@@ -83,7 +83,7 @@ function renderSlider() {
     <div id="right-box" class="box">
       <div class="recipe-container">
         <div class="image_wrapper">
-          <img class="imageel-sides" src="${rightMedia}">
+          <img class="imageel-sides" alt="right recipe image blurred" src="${rightMedia}">
         </div> 
       </div>
     </div>`;

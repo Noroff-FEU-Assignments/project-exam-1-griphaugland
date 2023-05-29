@@ -1,0 +1,188 @@
+/* Hero */
+.hero {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+.heroimage {
+  background-image: url("../media/eggbrodsandwich.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+}
+.herotext {
+  position: absolute;
+  z-index: 1;
+  left: 1rem;
+  bottom: -5%;
+  width: 23rem;
+  height: 23rem;
+}
+.hero-information {
+  position: absolute;
+  font-family: var(--font);
+  background-color: var(--theme-color-green);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 175px;
+  align-items: center;
+  z-index: 1;
+  right: 1rem;
+  bottom: 1rem;
+}
+.hero-information h2 {
+  padding-top: 0.3rem;
+  font-size: 1.5rem;
+  color: #fdc5c5;
+}
+.hero-information p {
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: #ffe3e3;
+}
+/* Slider */
+.btn {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 40%;
+  background-color: rgba(255, 255, 255, 0.588);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.arrowleft {
+  rotate: 180deg;
+}
+#prev-btn {
+  z-index: 5;
+  left: 0;
+}
+#next-btn {
+  z-index: 5;
+  right: 0;
+}
+@keyframes opacify {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.box {
+  width: 100%;
+  height: 100%;
+}
+.imageel {
+  width: 350px;
+  height: 350px;
+}
+.slider-wrapper {
+  background-color: #ededed;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  scroll-behavior: smooth;
+}
+.slide-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.slider-header {
+  color: rgb(136, 136, 136);
+  position: absolute;
+  right: 20px;
+  top: 2px;
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.slider {
+  width: 30;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  left: 0;
+  top: 0;
+  transition: 0.4s ease-in-out;
+  scroll-behavior: smooth;
+}
+.box {
+  flex: 1 0 34%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-family: var(--font);
+}
+.recipe-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  animation: opacify 2s;
+}
+.recipe-main {
+  font-size: 1.3rem;
+  color: var(--theme-color-green);
+}
+.imageel {
+  border-radius: 100%;
+  background-position: center;
+  background-size: fill;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imageel-sides {
+  border-radius: 100%;
+  background-position: center;
+  background-size: fill;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: blur(2px);
+}
+.excerpt-container {
+  position: absolute;
+  bottom: 10%;
+  width: 350px;
+  height: fit-content;
+  min-height: 50px;
+  padding: 8px;
+  background-color: var(--theme-color-pink);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.excerpt-container p {
+  font-size: 0.8rem;
+}

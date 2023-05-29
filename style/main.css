@@ -1,10 +1,13 @@
 @import url("./components.css");
+@import url("./index.css");
+@import url("./recipes.css");
+@import url("./specific.css");
+@import url("./contact.css");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   width: auto;
-  transition: 0.3s;
 }
 body {
   width: 100%;
@@ -53,4 +56,15 @@ main {
 }
 .pattern-main {
   overflow: hidden;
+}
+.slider:hover,
+.box-recipes:hover {
+  transform: scale(1.1);
+}
+.slider {
+  z-index: 2;
+}
+nav li a:hover,
+nav li a:after {
+  transition: 0.3s;
 }
