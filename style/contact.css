@@ -178,3 +178,6 @@ textarea:focus {
     width: 100%;
   }
 }
+label {
+  display: none;
+}
