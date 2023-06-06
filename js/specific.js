@@ -1,7 +1,7 @@
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get('id');
-const url = 'https://gripdev.no/exam1/wp-json/wp/v2/posts?_embed=wp:featuredmedia&per_page=20';
+const url = 'https://gripdev.no/projectexamdummy/wp-json/wp/v2/posts?_embed=wp:featuredmedia&per_page=20';
 const delay = 1000;
 const loader = document.getElementById("loaderFullPage");
 const main = document.getElementById('specific');
@@ -51,10 +51,6 @@ function renderSingleRecipe(data) {
                 <div class="preparation-tips">    
                     <div class="preparation"><h3>Tilberedning</h3></div>
                     <div class="tips-recipe"></div>
-                    <div class="commentsection">
-                        <div class="displayComments"></div>
-                        <div class="writeComment"></div>
-                    </div>
                 </div>   
             </div>
             <div class="hidden">${recipe.content.rendered}</div>
