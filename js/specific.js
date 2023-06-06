@@ -51,6 +51,10 @@ function renderSingleRecipe(data) {
                 <div class="preparation-tips">    
                     <div class="preparation"><h3>Tilberedning</h3></div>
                     <div class="tips-recipe"></div>
+                    <div class="commentsection">
+                        <div class="displayComments"></div>
+                        <div class="writeComment"></div>
+                    </div>
                 </div>   
             </div>
             <div class="hidden">${recipe.content.rendered}</div>

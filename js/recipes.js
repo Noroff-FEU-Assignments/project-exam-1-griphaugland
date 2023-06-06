@@ -17,7 +17,6 @@ fetch(url)
     loader.classList.add("show");
     loader.classList.remove("hide");
     allRecipes = data;
-    console.log(data)
     renderRecipes(data.slice(0, 10));
     loader.classList.add("hide");
     loader.classList.remove("show");
@@ -28,9 +27,6 @@ fetch(url)
 const renderRecipes = (recipes) => {
     main.innerHTML = recipes.map((ele) => {
       const { id, title, excerpt, content} = ele;
-      let imagesmall = ele._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
-      let imagemedium = ele._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
-      let imagelarge = ele._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
       let media = ele._embedded["wp:featuredmedia"][0].source_url;
       let renderedContent = ele.content.rendered
       const timeToMake = getTimeToMake(renderedContent); 
@@ -38,8 +34,7 @@ const renderRecipes = (recipes) => {
       <a href="/pages/specific.html?id=${id}" class="box-recipes">
       <div class="time">${timeToMake}</div>
       <div class="image_wrapper">
-      <img class="imageel" alt="Image of ${title}" srcset="${imagesmall} ${imagesmall.width}w, ${imagemedium} ${imagemedium.width}w, ${imagelarge} ${imagelarge.width}w"
-      sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, (max-width: 1300px) 1200px" src="${media}">
+      <img class="imageel" alt="Image of ${title}" src="${media}">
       </div> 
       <div class="title-container">
         <h1 class="recipes-main">${title.rendered}</h1>
