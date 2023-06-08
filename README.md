@@ -2,6 +2,9 @@
 ## Project Name
 StudentSnacks
 
+![Bergen-FED1-Eirik-Grip-Haugland logo](https://github.com/Noroff-FEU-Assignments/project-exam-1-griphaugland/assets/112164680/51b35484-fcdf-4153-8735-92b76976ce23)
+
+
 ## Description
 
 When reading the exam assignment I was a bit unsure what type of blog I wanted to create. I spent a few days creating designs in Figma with various types of blogs. One weekend I was making lunch and I googled the recipe for American Pancakes. There I found the inspira:on for what type of blog to create. A food blog with a target audience of students. Cheap, fast and healthy food for students with little time and money.
