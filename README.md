@@ -20,7 +20,7 @@ The project was built with
 - JavaScript
 
 ## Use code
-If you want to use to code you are welcome to clone the repo and play around with the project! :)
+If you want to use the code you are welcome to clone the repo and play around with the project! :)
 
  ## Contact
 If you want to get in touch, I can be reached through email: griphaugland@gmail.com
