@@ -147,6 +147,7 @@ li {
 }
 .tilberedning li {
   padding: 0.5rem;
+  text-align: start;
 }
 .tips-recipe {
   display: flex;
