@@ -14,6 +14,9 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
 }
+.menuA {
+  text-align: center;
+}
 .tilberedning li {
   list-style-position: inside;
 }
