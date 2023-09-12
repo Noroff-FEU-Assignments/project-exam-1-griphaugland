@@ -109,7 +109,7 @@
 li {
   width: 100%;
   font-family: var(--font);
-  text-align: center;
+  text-align: start;
 }
 .ingredients {
   position: relative;
